@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid purple;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+header {
+    background: url(patern100.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+}
+
+#top {
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.maindiv {
+    width:600px;
+    height:400px;
+    position:absolute;
+    margin-left:34%;
+    margin-top:90px;
+    background-image:url(morgan5.jpg);
+    background-size:100% 100%;
+    animation:slider 9s infinite linear;
+    border:1px solid #4d4d4d;
+}
+    
+
+@keyframes slider{
+    0%{background-image:url(morgan5.jpg);
+    }
+    35%{background-image:url(morgan10.jpg);
+    }
+    75%{background-image:url(morgan9.jpg);
+    } 
+    100%{background-image:url(morgan5.jpg);
+    }
+}
+
+.div2 {
+    margin-top: 250px;
+
+}
+
+.div2 img {
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-top: 135px;
+}
+
+.div-p {
+    width: 500px;
+    float: right;
+    margin-right: 22%;
+    margin-top: -70px;
+    text-align: justify;
+    text-indent: 2cm;
+    color: purple;
+    font-family: Tahoma;
+    font-size: 15px;
+}
+
+#text-p {
+    width: 60%;
+    margin-top: 120px;
+    text-align: justify;
+    margin-left: 19%;
+    font-family: Tahoma;
+    color: purple;
+    font-size: 15px;
+}
+
+.div3 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
